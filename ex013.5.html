@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <style>
+        body {
+            background-color: white;
+        }
+        h2 {
+            font: Bradley Hand, cursive;
+            color: FloralWhite;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var cor = document.getElementById("corFundo")
+        
+        if (hora >= 5 & hora < 12) {
+            document.write('<h2>Bom dia</h2>')
+            document.body.style.backgroundColor = "Coral"
+        } else if (hora >= 12 & hora < 18) {
+            document.write('<h2>Boa tarde</h2>')
+            document.body.style.backgroundColor = "Gold"
+        } else if (hora >= 0 & hora < 5) {
+            document.write('<h2>Boa madrugada</h2>')
+            document.body.style.backgroundColor = "MidnightBleu"
+        } else {
+            document.write('<h2 id="horaTexto">Boa noite</h2>')
+            document.body.style.backgroundColor = "Navy"
+        }
+    </script>
+</body>
+</html>
